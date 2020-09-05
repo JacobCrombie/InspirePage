@@ -9,9 +9,10 @@ function _drawTodos() {
   document.getElementById('list-items').innerHTML = template
 }
 
+
 export default class TodoController {
   constructor() {
-    todoService.getTodos();
+    this.getTodos();
     ProxyState.on('todos', _drawTodos)
   }
 
@@ -56,8 +57,5 @@ export default class TodoController {
     } catch (error) {
       console.error(error)
     }
-  }
-  test() {
-    console.log('test');
   }
 }

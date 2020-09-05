@@ -32,11 +32,10 @@
                         <p>Tasks Left</p>
                     </div>
                     <div class="card-body">
-                        <form class="form-group col" id="list-items"
-                            onsubmit="app.todoController.removeTodo(e, '${this.id}')">
-                            <button type="submit" class="btn bg-transparent ml-1 hvr-grow"><i class="fa fa-trash mr-2"
-                                    aria-hidden="true"></i>Delete Checked Items</button>
-                        </form>
+                        <ul class="col" id="list-items">
+                            <button onclick="app.todoController.removeAll()" class="btn btn-danger">Delete All
+                                Items</button>
+                        </ul>
                     </div>
                     <form class="form-group col d-flex flex-direction-row" onsubmit="app.todoController.addTodo(event)">
                         <input type="text" class="form-control" name="todo" id="todo" placeholder="What Else We Doin..."

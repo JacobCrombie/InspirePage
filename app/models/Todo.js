@@ -1,5 +1,9 @@
-export default class Todo {
+//REVIEW let elem = document.querySelector('input')
 
+// if (completed) {
+//   elem.setAttribute('checked')
+// }
+export default class Todo {
   constructor({ _id, description, user, completed }) {
     this.id = _id;
     this.completed = completed
@@ -8,9 +12,11 @@ export default class Todo {
   }
 
   get Template() {
-    return `
-      <input onclick="app.todoController.toggleTodoStatus('${this.id}')" type="checkbox" name="${this.id}">
-      <label for="List-Item">${this.description}</label><br>
+    return /*html */ `
+      <div class="d-flex justify-content-between">
+        <li class="mt-1"><input type="checkbox" class="mr-1" onclick="app.todoController.toggleTodoStatus()">${this.description}</li><i class="red grow fa fa-trash"
+                onclick="app.todoController.removeTodo('${this.id}')"></i>
+      </div>
     `
   }
 }

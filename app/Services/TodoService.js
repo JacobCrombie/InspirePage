@@ -2,11 +2,11 @@ import { ProxyState } from "../AppState.js";
 import { api } from "../Services/AxiosService.js";
 import Todo from "../Models/Todo.js";
 
-// TODO you will need to change 'YOURNAME' to your actual name or all requests will be rejected
 let url = 'Jake/todos/'
 
 
 class TodoService {
+
   async getTodos() {
     console.log("Getting the Todo List");
     let res = await api.get(url);
@@ -29,9 +29,10 @@ class TodoService {
   }
 
   async removeTodo(todoId) {
-    //TODO Work through this one on your own
-    //		what is the request type
-    //		once the response comes back, how do you update the state
+    await api.delete(url + todoId)
+    let index = ProxyState.todos.findIndex(t => t.id == todoId)
+    ProxyState.todos.splice(index, 1)
+    ProxyState.todos = ProxyState.todos
   }
 }
 
