@@ -14,9 +14,16 @@ export default class Todo {
   get Template() {
     return /*html */ `
       <div class="d-flex justify-content-between">
-        <li class="mt-1"><input type="checkbox" class="mr-1" onclick="app.todoController.toggleTodoStatus('${this.id}')">${this.description}</li><i class="red grow fa fa-trash"
-                onclick="app.todoController.removeTodo('${this.id}')"></i>
+        ${this.checkedTemplate}<i class="red grow fa fa-trash" onclick="app.todoController.removeTodo('${this.id}')"></i>
       </div>
     `
+  }
+  get checkedTemplate() {
+    if (this.completed) {
+      return `<li class="mt-1 text-strike"><input type="checkbox" checked class="mr-1" onclick="app.todoController.toggleTodoStatus('${this.id}')">${this.description}</li>`
+    } return `<li class="mt-1"><input type="checkbox" class="mr-1" onclick="app.todoController.toggleTodoStatus('${this.id}')">${this.description}</li>`
+  }
+  get tasksRemTemplate() {
+    return `<p class="my-auto">Tasks Left</p>`
   }
 }

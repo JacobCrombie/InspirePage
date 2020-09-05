@@ -62,6 +62,10 @@ ul {
   cursor: pointer;
 }
 
+.text-strike {
+  text-decoration-line: line-through;
+}
+
 /* .card{
   cursor: pointer;
   opacity: 0.5;

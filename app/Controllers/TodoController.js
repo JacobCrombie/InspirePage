@@ -8,12 +8,23 @@ function _drawTodos() {
   listItems.forEach(i => template += i.Template)
   document.getElementById('list-items').innerHTML = template
 }
+function _drawTaskRem() {
+  let count = 0
+  for (let i = 0; i < ProxyState.todos.length; i++) {
+    const todo = ProxyState.todos[i];
+    if (!todo.completed) {
+      count++
+    }
+  }
+  document.getElementById('tasksRem').innerHTML = `<p class="my-auto">${count}-Todos Left</p>`
+}
 
 
 export default class TodoController {
   constructor() {
     this.getTodos();
     ProxyState.on('todos', _drawTodos)
+    ProxyState.on('todos', _drawTaskRem)
   }
 
   getTodos() {

@@ -28,14 +28,16 @@
             <div class="col-4 offset-8">
                 <div class="card shadow text-wrap">
                     <div class="card-header d-flex justify-content-between flex-direction-column">
-                        <h5 class="">Todo-List</h5>
-                        <p>Tasks Left</p>
+                        <h5 class="my-auto">Todo-List</h5>
+                        <div id="tasksRem">
+
+                        </div>
                     </div>
                     <div class="card-body">
                         <ul class="col" id="list-items">
-                            <button onclick="app.todoController.removeAll()" class="btn btn-danger">Delete All
-                                Items</button>
                         </ul>
+                        <!-- <button onclick="app.todoController.removeAll()" class="btn btn-danger">Delete All
+                            Items</button> -->
                     </div>
                     <form class="form-group col d-flex flex-direction-row" onsubmit="app.todoController.addTodo(event)">
                         <input type="text" class="form-control" name="todo" id="todo" placeholder="What Else We Doin..."
