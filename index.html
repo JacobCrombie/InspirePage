@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/style/main.css">
     <title>Inspire</title>
 </head>
 
 <body id="bg-img">
-    <main class="container-fluid" >
+    <main class="container-fluid">
 
 
         <div class="row">
@@ -22,35 +24,29 @@
 
 
 
-<div class="row">
-    <div class="col-4 offset-8" id="todo">
-        <div class="col my-1">
-            <div class="card shadow">
-              <h5 class="card-header">Todo-List</h5>
-              <div class="card-body">
-                <ul class="text-wrap">
-                    <form class="form-group col" onsubmit="app.todoController.removeTodo(e, '${this.id}')">
-                        <input type="checkbox" name="${this.id}" value="Bike">
-                        <label for="vehicle1"> I have a bike</label><br>
-                        <input type="checkbox" name="vehicle2" value="Car">
-                        <label for="vehicle2"> I have a car</label><br>
-                        <input onclick="app.todoController.test()" type="checkbox" name="vehicle3" value="Boat">
-                        <label for="vehicle3"> I have a boat</label><br><br>
-                        <button type="submit" class="btn bg-transparent ml-1 hvr-grow"><i class="fa fa-plus-circle"
-                            aria-hidden="true"></i></button>
-                      </form>
-                </ul>
-              </div>
-              <form class="form-group col d-flex flex-direction-row"
-                onsubmit="app.todoController.addTodo(e, '${this.id}')">
-                <input type="text" class="form-control" name="task" id="task" placeholder="Enter Task..." required>
-                  <button type="submit" class="btn bg-transparent ml-1 hvr-grow"><i class="fa fa-plus-circle"
-                    aria-hidden="true"></i></button>
-              </form>
+        <div class="row">
+            <div class="col-4 offset-8">
+                <div class="card shadow text-wrap">
+                    <div class="card-header d-flex justify-content-between flex-direction-column">
+                        <h5 class="">Todo-List</h5>
+                        <p>Tasks Left</p>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-group col" id="list-items"
+                            onsubmit="app.todoController.removeTodo(e, '${this.id}')">
+                            <button type="submit" class="btn bg-transparent ml-1 hvr-grow"><i class="fa fa-trash mr-2"
+                                    aria-hidden="true"></i>Delete Checked Items</button>
+                        </form>
+                    </div>
+                    <form class="form-group col d-flex flex-direction-row" onsubmit="app.todoController.addTodo(event)">
+                        <input type="text" class="form-control" name="todo" id="todo" placeholder="What Else We Doin..."
+                            required>
+                        <button type="submit" class="btn bg-transparent"><i class="fa fa-plus-circle"
+                                aria-hidden="true"></i></button>
+                    </form>
+                </div>
             </div>
-          </div>
-    </div>
-</div>
+        </div>
 
         <div id="app">
         </div>
