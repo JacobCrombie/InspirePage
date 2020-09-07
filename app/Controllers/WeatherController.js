@@ -3,7 +3,7 @@ import weatherService from "../Services/WeatherService.js";
 
 //NOTE The weather service and controller are mostly done,
 //		you may wish to check out the model and include some additional data.
-function _drawWeather(){
+function _drawWeather() {
   document.getElementById('weather').innerHTML = ProxyState.weather.weatherTemplate
   console.log("THE WEATHER MAN SAYS:", ProxyState.weather);
 }
@@ -22,5 +22,8 @@ export default class WeatherController {
     catch (e) {
       console.error(e)
     }
+  }
+  swapWeather() {
+    weatherService.swapWeather()
   }
 }

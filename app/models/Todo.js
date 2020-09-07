@@ -15,7 +15,7 @@ export default class Todo {
   }
   get checkedTemplate() {
     if (this.completed) {
-      return `<li class="mt-1 text-strike"><input type="checkbox" checked class="mr-1" onclick="app.todoController.toggleTodoStatus('${this.id}')">${this.description}</li>`
-    } return `<li class="mt-1"><input type="checkbox" class="mr-1" onclick="app.todoController.toggleTodoStatus('${this.id}')">${this.description}</li>`
+      return `<li class="mt-1 text-strike"><input type="checkbox" checked class="mr-1 grow pointer" onclick="app.todoController.toggleTodoStatus('${this.id}')">${this.description}</li>`
+    } return `<li class="mt-1"><input type="checkbox" class="mr-1 grow pointer" onclick="app.todoController.toggleTodoStatus('${this.id}')">${this.description}</li>`
   }
 }

@@ -10,15 +10,15 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+    this.farenheit = (((this.kelvin - 273.15) * 1.8) + 32).toFixed(0) + '°F'
+    this.celcius = (this.kelvin - 273.15).toFixed(0) + '°C'
   }
-  get weatherTemplate(){
+  get weatherTemplate() {
     return `
-    <div class="card shadow mr-2 mt-2">
-    <div class="card-body">
-        <h4 class="card-title">${this.kelvin}°</h4>
-        <p class="card-text">${this.city}</p>
+    <div class="card-body p-0 text-center w-shadow d-flex flex-direction-column justify-content-around">
+        <h1 class="card-title pointer" id="temp" onclick="app.weatherController.swapWeather()">${this.farenheit}</h1>
+        <h4 class="card-text align-self-center">${this.city}</h4>
     </div>
-</div>
     `
   }
 }
