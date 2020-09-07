@@ -12,12 +12,20 @@
     <title>Inspire</title>
 </head>
 
-<body id="bg-img">
+<body id="bg-img" onload="mytime()">
     <main class="container-fluid">
 
 
         <div class="row">
-            <div class="col-2 offset-10" id="weather">
+            <div class="col">
+                <div class="col mt-5" id="weather">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <p id="time" class="ft-sz user-select-none"></p>
             </div>
         </div>
 
@@ -25,18 +33,16 @@
 
 
         <div class="row">
-            <div class="col-4 offset-8">
-                <div class="card shadow text-wrap">
-                    <div class="card-header d-flex justify-content-between flex-direction-column">
-                        <h5 class="my-auto">Todo-List</h5>
+            <div class="todo">
+                <div class="card bg-light shadow text-wrap">
+                    <div class="card-header bg-warning d-flex justify-content-between flex-direction-column">
+                        <h5 class="my-auto user-select-none">Todo-List</h5>
                         <div id="tasksRem">
                         </div>
                     </div>
                     <div class="card-body">
-                        <ul class="col" id="list-items">
+                        <ul class="col text-break" id="list-items">
                         </ul>
-                        <!-- <button onclick="app.todoController.removeAll()" class="btn btn-danger">Delete All
-                            Items</button> -->
                     </div>
                     <form class="form-group col d-flex flex-direction-row" onsubmit="app.todoController.addTodo(event)">
                         <input type="text" class="form-control" name="todo" id="todo" placeholder="What Else We Doin..."
@@ -53,7 +59,7 @@
 
     <footer class="container-fluid bg-transparent">
         <div class="row text-center mb-1">
-            <div class="col align-items-end" id="quote">
+            <div class="col align-items-end user-select-none" id="quote">
             </div>
         </div>
     </footer>
@@ -71,6 +77,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
         integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app/clock.js">
+    </script>
     <script src="app/main.js" type="module"></script>
 </body>
 

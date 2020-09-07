@@ -15,9 +15,9 @@ export default class Weather {
   }
   get weatherTemplate() {
     return `
-    <div class="card-body p-0 text-center w-shadow d-flex flex-direction-column justify-content-around">
+    <div class="card-body p-0 text-center w-shadow d-flex flex-direction-column justify-content-center">
         <h1 class="card-title pointer" id="temp" onclick="app.weatherController.swapWeather()">${this.farenheit}</h1>
-        <h4 class="card-text align-self-center">${this.city}</h4>
+        <h4 class="ml-2 card-text align-self-center">${this.city}</h4>
     </div>
     `
   }

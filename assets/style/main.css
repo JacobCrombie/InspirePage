@@ -71,7 +71,7 @@ ul {
 }
 
 footer {
-  user-select: none;
+  cursor: cell;
 }
 
 .text-shadow {
@@ -84,15 +84,27 @@ footer {
   text-shadow: 4px 4px 20px whitesmoke;
 }
 
-/* .card {
-  cursor: pointer;
-  opacity: 0.5;
-} */
+.ft-sz {
+  margin-top: 300px;
+  font-size: 100pt;
+  color: black;
+  text-shadow: 4px 4px 20px whitesmoke;
+}
 
-/* .card a:hover{
+.card {
+  opacity: 0.1;
+}
+
+.card:hover {
   transition: all;
-  opacity: 1;
-} */
+  opacity: .75;
+}
+
+.todo {
+  position: absolute;
+  right: 10px;
+  bottom: 100px;
+}
 
 /* bootstrap css */
 

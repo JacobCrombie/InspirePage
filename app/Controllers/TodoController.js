@@ -16,7 +16,7 @@ function _drawTaskRem() {
       count++
     }
   }
-  document.getElementById('tasksRem').innerHTML = `<p class="my-auto">${count}-Todos Left</p>`
+  document.getElementById('tasksRem').innerHTML = `<p class="my-auto user-select-none"><span class="font-weight-bold">${count}</span>-Todos Left</p>`
 }
 
 
