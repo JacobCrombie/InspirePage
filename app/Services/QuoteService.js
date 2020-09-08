@@ -1,7 +1,7 @@
 import { ProxyState } from "../AppState.js";
 import Quote from "../models/Quote.js";
 import { api } from "./AxiosService.js";
-import Weather from "../models/Weather.js";
+import Weather from "../Models/Weather.js";
 
 //TODO create methods to retrieve data and update the State
 class QuoteService {

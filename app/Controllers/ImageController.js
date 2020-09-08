@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import Image from "../models/Image.js";
+import Image from "../Models/Image.js";
 import imageService from "../Services/ImageService.js";
 
 //TODO Create methods for constructor, and rendering the image to the page
