@@ -7,7 +7,7 @@ export default class Quote {
 
   get Template() {
     return `
-    <h4 class="text-shadow bg-transparent" data-toggle="tooltip" data-placement="right" title="${this.author}">"${this.body}"</h4>
+    <h4 class="text-shadow bg-transparent" data-toggle="tooltip" data-placement="right" title="-${this.author}">"${this.body}"</h4>
     `
   }
 }
